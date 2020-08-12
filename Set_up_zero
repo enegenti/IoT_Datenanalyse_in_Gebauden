@@ -1,0 +1,75 @@
+#!/bin/bash
+# This is my first script! This is a comment.
+
+# Format SD Card
+# Install Raspbian
+# Go to Raspberry Pi Configuration --> Interfaces --> Enable camera
+
+cd ~
+sudo apt-get update
+sudo apt-get upgrade
+
+
+# Grove Base HAT
+# One step install Grove Base HAT - https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi_Zero/
+cd ~
+curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
+
+sudo apt-get install libffi-dev
+
+# Enviro +
+# https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-enviro-plus
+cd ~
+git clone https://github.com/pimoroni/enviroplus-python
+cd enviroplus-python
+sudo ./install.sh -y
+
+sudo pip3 install pimoroni-bme280
+sudo pip3 install ltr559
+sudo pip3 install enviroplus
+
+# Seed Studio Grove CO2 & Temp & Humidity Sensor
+cd ~
+#sudo pip3 install smbus-cffi
+#wget https://github.com/JoBergs/RaspiContent/raw/master/i2c_scd30.py
+sudo python3 -m pip install scd30_i2c
+
+# GPR30
+cd ~
+git clone https://github.com/Seeed-Studio/Seeed_Python_SGP30.git
+cd Seeed_Python_SGP30
+sudo python setup.py install
+sudo python3 setup.py install
+
+# PIR Sensor
+cd ~
+git clone https://github.com/Seeed-Studio/grove.py
+
+
+sudo apt install pyt
+sudo apt install python3-opencv
+sudo apt-get install libatlas-base-dev
+sudo apt-get install libjasper-dev
+sudo apt-get install libqtgui4
+sudo apt-get install python3-pyqt5
+sudo apt-get install libqt4-test
+sudo pip3 install imutils
+sudo pip3 install opencv-contrib-python==4.1.0.25
+cd ~
+# Go to Raspberry Pi Configuration --> Interfaces --> Enable camera
+
+
+# install Mosquitto
+sudo apt install mosquitto -Y
+sudo apt install mosquitto-clients
+sudo systemctl enable mosquitto.service
+
+# Install Mosquitto in Pyhton
+sudo pip3 install paho-mqtt
+
+
+# FAR CREARE CARTELLE E FILE TXT VUOTO
+
+
+
+sudo reboot
