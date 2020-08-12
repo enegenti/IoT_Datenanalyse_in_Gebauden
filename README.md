@@ -29,10 +29,10 @@ Description of the scripts:
 Set_up_zero:
 Run this to install all the necessary modules on each RsPi Zero
 #Before running the set up script do the following steps for each Raspberry Pi Zero:
-# 1) Format SD Card
-# 2) Install Raspbian
-# 3) Go to Raspberry Pi Configuration --> Interfaces --> Enable camera
-# 4) Run this script
+1) Format SD Card
+2) Install Raspbian
+3) Go to Raspberry Pi Configuration --> Interfaces --> Enable camera
+4) Run this script
 
 Zero_settings_BUX.py
 This settings script set specific values for each Basic Unit. In this file you have to enable all the connected sensors
